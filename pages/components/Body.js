@@ -27,7 +27,7 @@ const Body = () => {
 
   useEffect(() => {
     fetch(
-      "https://api.geoapify.com/v2/places?categories=catering.restaurant&bias=proximity:100.523186,13.736717&limit=20&apiKey=f85e677b429c4c0e92ce5b005c3642b1"
+      "https://api.geoapify.com/v2/places?categories=catering.restaurant&bias=proximity:100.523186,13.736717&limit=450&apiKey=f85e677b429c4c0e92ce5b005c3642b1"
     )
       .then((response) => response.json())
       .then((result) => useAble(result))
@@ -64,7 +64,6 @@ const Body = () => {
   console.log(dataFilter);
   return (
     <div className="shop">
-      {word}
       <ul>
         {searchShop(shopData).map((item, index) => {
           return (
